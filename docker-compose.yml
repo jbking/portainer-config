@@ -1,8 +1,8 @@
-version: '2'
+version: '2.1'
 
 services:
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer:1.20.0
     ports:
       - "9000:9000"
     command: -H unix:///var/run/docker.sock
@@ -12,3 +12,4 @@ services:
     restart: always
 volumes:
   portainer_data:
+    name: portainer_portainer_data
